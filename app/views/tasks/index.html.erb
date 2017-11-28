@@ -6,6 +6,9 @@
     <h3><%= task.description %></h3>
     <p>Task ID: <%= task.id %></p>
     <%= link_to 'View Task', task_path(task) %>
+    <%= link_to 'Edit Task', edit_task_path(task) %>
+    <%= link_to 'Complete Task', @task, method: :delete %>
+
   </blockquote>
   <hr />
 <% end %>

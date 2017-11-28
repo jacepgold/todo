@@ -4,4 +4,5 @@
   <%= @task.completed ? 'Completed' : 'To Do'  %>
 </h3>
 <p>Task ID: <%= @task.id %></p>
+<%= link_to 'Complete Task', @task, method: :delete %>
 <%= link_to 'View Tasks', tasks_path %>
