@@ -1,0 +1,9 @@
+<h1>To Do</h1>
+<% @tasks.each do |task| %>
+  <blockquote>
+    <h2><%= task.title %></h2>
+    <h3><%= task.description %></h3>
+    <p>Task ID: <%= task.id %></p>
+    <%= link_to 'Show Task', task_path(task) %>
+  </blockquote>
+<% end %>
