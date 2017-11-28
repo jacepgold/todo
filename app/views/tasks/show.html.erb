@@ -1,4 +1,7 @@
 <h1><%= @task.title %></h1>
 <h2><%= @task.description %></h2>
+<h3>Status -
+  <%= @task.completed ? 'Completed' : 'To Do'  %>
+</h3>
 <p>Task ID: <%= @task.id %></p>
-<%= link_to 'Tasks', tasks_path %>
+<%= link_to 'View Tasks', tasks_path %>

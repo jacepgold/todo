@@ -1,2 +1,12 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h1>New Task</h1>
+<%= form_for @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, placeholder: 'Task Title' %>
+  <br />
+  <%= f.label :description %>
+  <%= f.text_area :description, placeholder: 'Task Description' %>
+  <br />
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'View Tasks', tasks_path %>
