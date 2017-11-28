@@ -1,2 +1,11 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<h1>Welcome</h1>
+<p>
+  This is the most amazing todo list (on rails!) in the
+  history of todo lists!
+</p>
+<% if @tasks.any? %>
+  <h2><%= link_to 'View Tasks', tasks_path %></h2>
+<% else %>
+  <h2>There are currently no tasks... Would you like to add one?</h2>
+  <%= link_to 'Create Task', new_task_path %>
+<% end %>
