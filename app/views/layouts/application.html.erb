@@ -23,6 +23,15 @@
       header h1 {
         text-align: center;
       }
+      header h1 a {
+        color: white;
+      }
+      header h1 a:visited {
+        color: white;
+      }
+      header h1 a:hover {
+        color: lightblue;
+      }
       .center {
         text-align: center;
         margin: 0 auto;
@@ -35,7 +44,7 @@
 
   <body>
     <header>
-      <h1>Jace's Todo List... On rails!</h1>
+      <h1><%= link_to "Jace's Todo List... On Rails!", root_path %></h1>
     </header>
     <hr />
     <%= yield %>
