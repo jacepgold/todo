@@ -1,10 +1,11 @@
-<h1>To Do</h1>
+<h1 class="center">To Do</h1>
 <hr />
 <% @tasks.each do |task| %>
   <blockquote>
-    <h2><%= task.title %></h2>
-    <h3><%= task.description %></h3>
-    <p>Task ID: <%= task.id %></p>
+    <h1 class="underline"><%= task.title %></h1>
+    <h2><%= task.description %></h2>
+    <i>Task ID: <%= task.id %></i>
+    <br /><br />
     <%= link_to 'View Task', task_path(task) %>
     <%= link_to 'Edit Task', edit_task_path(task) %>
     <%= link_to 'Complete Task', @task, method: :delete %>

@@ -1,8 +1,9 @@
-<h1><%= @task.title %></h1>
+<h1 class="underline">Task - <%= @task.title %></h1>
 <h2><%= @task.description %></h2>
 <h3>Status -
   <%= @task.completed ? 'Completed' : 'To Do'  %>
 </h3>
-<p>Task ID: <%= @task.id %></p>
+<i>Task ID: <%= @task.id %></i>
 <%= link_to 'Complete Task', @task, method: :delete %>
-<%= link_to 'View Tasks', tasks_path %>
+<%= link_to 'Edit This Task', edit_task_path(@task) %>
+<%= link_to 'View All Tasks', tasks_path %>
