@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   def index
     @tasks = Task.all
+    @percent_complete = Todo.percent_complete
   end
 
   def show
